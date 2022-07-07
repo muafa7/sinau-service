@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "matpels",
+  "info": {
+    "singularName": "matpel",
+    "pluralName": "matpels",
+    "displayName": "Matpel",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "siswa": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::siswa.siswa",
+      "mappedBy": "matpel"
+    },
+    "id_matpel": {
+      "type": "string",
+      "unique": true
+    },
+    "nama_matpel": {
+      "type": "string"
+    },
+    "gurus": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::guru.guru",
+      "mappedBy": "matpel"
+    }
+  }
+}

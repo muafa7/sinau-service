@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nilais",
+  "info": {
+    "singularName": "nilai",
+    "pluralName": "nilais",
+    "displayName": "Nilai",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uh1": {
+      "type": "integer",
+      "min": 0,
+      "max": 100
+    },
+    "uh2": {
+      "type": "integer",
+      "min": 0,
+      "max": 100
+    },
+    "uts": {
+      "type": "integer",
+      "max": 100,
+      "min": 0
+    },
+    "uas": {
+      "type": "integer",
+      "max": 100,
+      "min": 0
+    },
+    "guru": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::guru.guru"
+    },
+    "matpel": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::matpel.matpel"
+    },
+    "siswa": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::siswa.siswa"
+    }
+  }
+}

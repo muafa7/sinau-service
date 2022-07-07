@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gurus",
+  "info": {
+    "singularName": "guru",
+    "pluralName": "gurus",
+    "displayName": "Guru",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama_guru": {
+      "type": "string"
+    },
+    "alamat_guru": {
+      "type": "text"
+    },
+    "gambar_guru": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "hp_guru": {
+      "type": "string"
+    },
+    "nip": {
+      "type": "string"
+    },
+    "jenis_kelamin": {
+      "type": "enumeration",
+      "enum": [
+        "laki-laki",
+        "perempuan"
+      ]
+    },
+    "matpel": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::matpel.matpel",
+      "inversedBy": "gurus"
+    }
+  }
+}

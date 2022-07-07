@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "siswas",
+  "info": {
+    "singularName": "siswa",
+    "pluralName": "siswas",
+    "displayName": "Siswa",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama_siswa": {
+      "type": "string"
+    },
+    "tanggal_lahir": {
+      "type": "date"
+    },
+    "nama_ortu": {
+      "type": "string"
+    },
+    "gambar_siswa": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "matpel": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::matpel.matpel",
+      "inversedBy": "siswa"
+    },
+    "hp_ortu": {
+      "type": "string"
+    },
+    "nisn": {
+      "type": "string"
+    },
+    "jenis_kelamin": {
+      "type": "enumeration",
+      "enum": [
+        "laki-laki",
+        "perempuan"
+      ]
+    }
+  }
+}
